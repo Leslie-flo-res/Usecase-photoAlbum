@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhotoAlbum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+
+
+
+
+    <!----navbar-->
+
+    <nav class="navbar navbar-expand-lg  nav-bg ">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="startup_website.html">Oro</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item ">
+                <a class="nav-link active text-white" aria-current="page" href="startup_website.html">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " href="catalog.html">Catalog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="feedback.html">Feedback</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#actionButton").click(function () {
+          let username = $("#username").val();
+          let comment = $("#comment").val();
+          let image = $("#image").val();
+          console.log(username, comment, image);
+
+          
+           if (username.length < 6) {
+            alert("  Username must be min 6 characters");
+            return;
+          } 
+           if (image === "") {
+            alert("Which Image?");
+            return;
+          }
+
+         if (comment ==="") {
+            alert("Enter Comment ");
+            return;
+          } 
+
+          $("#actionButton").css({
+            "background-color": "pink",
+            "border-color": "grey", 
+             "border-weight":"1px", 
+             "border-style":"solid"
+           
+        });
+        
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form class="feedback ">
+      <p>
+        <label>User name:</label> <br>
+        <input type="text" id="username" />
+      </p> 
+      <p>
+        <label>Image:</label> <br>
+        <input type="text" id="image"/>
+      </p>
+
+      <p>
+        <label>Comment:</label> <br>
+        <textarea id="comment" rows="4" cols="30"></textarea>
+      </p>
+
+     
+
+      <button type="button" id="actionButton">Submit</button>
+    </form>
+  
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>

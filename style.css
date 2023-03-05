@@ -1,0 +1,119 @@
+/*jumbrotron*/
+body{
+    background-color: #fbd1f971;
+}
+
+
+
+
+
+.Jumbotron{
+    background-image:url(img/mountain.jpg);
+    background-position:right 15% bottom 40%;
+    height:auto;
+    max-width:100% ;
+    background-size: cover;
+    color:#fff
+   
+   
+    
+}
+.logo{
+    color:#fff;
+    font-weight: 800;
+    font-size:2.5em;text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+    
+}
+
+.lead{
+    color:#fff; 
+text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+
+    
+    
+}
+
+.Jt-btn {
+    color:#395169;
+    background-color: #ffffff0e;
+    border:#395169 solid 2px;
+}
+.Jt-btn:hover{
+    background-color: #395169;
+}
+
+/*Navbar*/
+
+
+.nav-bg{
+    background-color:#7b9cb8;
+    color:#fff;
+}
+
+.nav-link{
+    color:white;
+   
+}
+.nav-link:hover{
+    color:#fbd1f99a;
+}
+
+.moun-cards{
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+    column-gap: 40px; ;
+
+}
+/*catagory*/
+
+.rockies{
+    display:flex;
+    align-items: flex-end;
+    column-gap :20px;
+}
+
+.hawaii{
+    display:flex;
+    column-gap :20px;
+   
+    
+}
+
+.alps{
+    display:flex;
+    column-gap :20px;
+  
+ 
+}
+
+
+@media screen and (max-width:900px){
+.moun-cards{
+    display:flex;
+    flex-direction:column;
+    align-items: center; 
+    row-gap:25px;}
+
+
+    .rockies, .hawaii,.alps{
+        display:flex;
+        flex-direction:column;
+        align-items: center; 
+        row-gap:25px;
+        width:70%;
+    }
+    h2{
+        margin:20px;
+        text-align: center;
+      
+    }
+
+}
+
+.feedback{
+    margin-top:30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
