@@ -6,6 +6,7 @@
     <title>PhotoAlbum</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
  <link rel="stylesheet" href="style.css">
+
 </head>
   <body>
 
@@ -59,31 +60,33 @@
           let username = $("#username").val();
           let comment = $("#comment").val();
           let image = $("#image").val();
-          console.log(username, comment, image);
-
           
-           if (username.length < 6) {
-            alert("  Username must be min 6 characters");
-            return;
-          } 
-           if (image === "") {
-            alert("Which Image?");
-            return;
-          }
+          
+     let isValid = true;
 
-         if (comment ==="") {
-            alert("Enter Comment ");
-            return;
-          } 
+     
 
-          $("#actionButton").css({
-            "background-color": "pink",
-            "border-color": "grey", 
-             "border-weight":"1px", 
-             "border-style":"solid"
-           
-        });
+       if (username.length === 0) {
+             isValid = false;
+          $("#username-error").text("Please enter your Username").css("color","red");
         
+        
+                    }     
+
+       if (image.length === 0) {
+             isValid = false;
+           $("#image-error").text("Which image are you referring to?").css("color","red");
+        }
+      if (comment.length === 0) {
+            isValid = false;
+             $("#comment-error").text("Please enter your comment").css("color","red");
+        }
+
+  if (isValid) {
+     console.log(username, comment, image);
+  }
+       
+
         });
       });
     </script>
@@ -93,15 +96,18 @@
       <p>
         <label>User name:</label> <br>
         <input type="text" id="username" />
+        <span id="username-error"></span>
       </p> 
       <p>
         <label>Image:</label> <br>
         <input type="text" id="image"/>
+        <span id="image-error"></span>
       </p>
 
       <p>
         <label>Comment:</label> <br>
         <textarea id="comment" rows="4" cols="30"></textarea>
+        <span id="comment-error"></span>
       </p>
 
      
